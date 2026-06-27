@@ -7,7 +7,7 @@
 Built for Kazakh, Russian, and mixed-language users.
 Designed for people, NGOs, civic-tech teams, and developers building public-interest AI for underserved communities.
 
-[Try the demo]
+[Try the demo](https://jardemai.github.io)
 
 ---
 
