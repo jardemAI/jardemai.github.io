@@ -16,10 +16,18 @@
   <link rel="alternate" hreflang="x-default" href="https://jardemai.github.io/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/mystic-animation.css" />
 </head>
 <body>
+  <div id="jardemPreloader" class="mystic-preloader" data-mystic-loader aria-live="polite">
+    <div class="mystic-loader-orb"></div>
+    <div class="mystic-loader-title">Järdem AI</div>
+    <div class="mystic-loader-text">opening luminous routes</div>
+  </div>
+
   <div class="noise"></div>
   <div class="ambient-particles" aria-hidden="true"></div>
+  <div class="mystic-backdrop" data-mystic="background" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="#top" data-i18n-attr="aria-label:aria.home"><span class="brand-mark">J</span><span>Järdem AI</span></a>
     <nav class="nav">
@@ -29,6 +37,7 @@
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="header-actions">
+      <button id="mysticSoundToggle" class="mystic-sound-toggle" type="button" aria-pressed="false" title="Ambient sound">Sound</button>
       <div class="language-switcher" data-i18n-attr="aria-label:aria.languageSwitcher">
         <button type="button" class="lang-btn" data-lang="ru">RU</button>
         <button type="button" class="lang-btn" data-lang="kk">KZ</button>
@@ -53,32 +62,71 @@
         </div>
       </div>
       <div class="hero-card">
-        <div class="aurora-map" aria-hidden="true">
-          <div class="orb orb-a"></div>
-          <div class="orb orb-b"></div>
-          <div class="orb orb-c"></div>
-          <svg class="constellation" viewBox="0 0 520 300" role="img" aria-label="">
+        <div class="mystic-hero-stage" data-mystic="hero" aria-hidden="true">
+          <div class="mystic-depth-layer layer-moon"></div>
+          <div class="mystic-depth-layer layer-silk"></div>
+          <div class="mystic-depth-layer layer-mountains"></div>
+          <div class="mystic-depth-layer layer-symbols">
+            <span>◇</span><span>✦</span><span>𐰀</span><span>◌</span><span>✧</span>
+          </div>
+          <svg class="mystic-map" viewBox="0 0 760 420" preserveAspectRatio="xMidYMid meet">
             <defs>
-              <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#8ef5d3" stop-opacity="0.15"/>
-                <stop offset="50%" stop-color="#ffd38e" stop-opacity="0.95"/>
-                <stop offset="100%" stop-color="#c7a6ff" stop-opacity="0.25"/>
+              <linearGradient id="mysticRoute" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8ef5d3" stop-opacity="0.05" />
+                <stop offset="45%" stop-color="#ffd38e" stop-opacity="0.95" />
+                <stop offset="100%" stop-color="#c7a6ff" stop-opacity="0.18" />
               </linearGradient>
-              <filter id="softGlow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <radialGradient id="mysticNode" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#fff7d7" />
+                <stop offset="55%" stop-color="#8ef5d3" />
+                <stop offset="100%" stop-color="#8ef5d3" stop-opacity="0" />
+              </radialGradient>
+              <filter id="mysticGlow">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
             </defs>
-            <path class="route route-1" d="M62 194 C128 126, 188 158, 244 96 S358 74, 456 132"/>
-            <path class="route route-2" d="M84 96 C154 132, 188 220, 284 194 S384 154, 448 210"/>
-            <path class="route route-3" d="M126 238 C196 180, 242 214, 306 132 S386 72, 462 74"/>
-            <g class="nodes" filter="url(#softGlow)">
-              <circle cx="62" cy="194" r="4"/><circle cx="84" cy="96" r="3"/><circle cx="126" cy="238" r="3.5"/>
-              <circle cx="244" cy="96" r="5"/><circle cx="284" cy="194" r="4.5"/><circle cx="306" cy="132" r="3.8"/>
-              <circle cx="456" cy="132" r="4"/><circle cx="448" cy="210" r="3.2"/><circle cx="462" cy="74" r="3.8"/>
+
+            <path class="land-shape" d="M108 248 C144 172 218 138 302 158 C376 84 484 86 552 144 C620 154 674 194 688 248 C624 294 542 312 462 288 C378 346 264 336 206 292 C164 298 130 282 108 248Z" />
+
+            <path class="m-route route-a" d="M96 260 C180 166 256 206 330 122 S494 98 654 176" />
+            <path class="m-route route-b" d="M142 142 C238 184 286 312 410 266 S548 204 664 292" />
+            <path class="m-route route-c" d="M190 326 C286 242 348 300 424 186 S552 108 680 116" />
+            <path class="m-route route-d" d="M120 218 C230 238 330 228 440 202 S602 198 704 226" />
+
+            <g class="m-nodes" filter="url(#mysticGlow)">
+              <circle cx="96" cy="260" r="8" />
+              <circle cx="142" cy="142" r="6" />
+              <circle cx="190" cy="326" r="6" />
+              <circle cx="330" cy="122" r="9" />
+              <circle cx="410" cy="266" r="8" />
+              <circle cx="424" cy="186" r="7" />
+              <circle cx="654" cy="176" r="7" />
+              <circle cx="664" cy="292" r="6" />
+              <circle cx="680" cy="116" r="6" />
             </g>
-            <g class="map-labels"><text x="218" y="82">Qazaqstan</text><text x="390" y="62">Kyrgyz</text><text x="354" y="226">Uzbek</text><text x="56" y="216">Caspian</text></g>
+
+            <g class="m-labels">
+              <text x="292" y="108">Qazaqstan</text>
+              <text x="594" y="104">Kyrgyz</text>
+              <text x="570" y="318">Uzbek</text>
+              <text x="102" y="288">Caspian</text>
+            </g>
           </svg>
-          <div class="signal-card signal-card-one"><span data-i18n="animation.signal1Label">Signal</span><strong data-i18n="animation.signal1Value">mixed-language request</strong></div>
-          <div class="signal-card signal-card-two"><span data-i18n="animation.signal2Label">Local check</span><strong data-i18n="animation.signal2Value">trusted source routing</strong></div>
+
+          <div class="mystic-signal signal-left">
+            <span>Signal</span>
+            <strong>mixed-language request</strong>
+          </div>
+          <div class="mystic-signal signal-right">
+            <span>Local route</span>
+            <strong>trusted source path</strong>
+          </div>
         </div>
+
         <div class="phone-window">
           <div class="phone-top"><span></span><span></span><span></span></div>
           <div class="chat-label" data-i18n="hero.previewLabel">Järdem AI assistant</div>
@@ -125,6 +173,33 @@
       </div>
     </section>
 
+
+
+    <section class="mystic-inline-showcase section">
+      <div class="section-heading center">
+        <span class="kicker">Atmospheric UI system</span>
+        <h2>A living interface for loading, transitions, and quiet product moments.</h2>
+        <p>The same animation system can run as a hero scene, subtle background, preloader, modal ambience, or small embedded UI element.</p>
+      </div>
+      <div class="mystic-mini-grid">
+        <div class="mystic-mini-card">
+          <div class="mystic-mini" data-mystic="mini" data-mystic-tone="route"></div>
+          <strong>Loading route</strong>
+          <span>For preloaders and page transitions.</span>
+        </div>
+        <div class="mystic-mini-card">
+          <div class="mystic-mini" data-mystic="mini" data-mystic-tone="signal"></div>
+          <strong>Signal pulse</strong>
+          <span>For cards, modals, and active states.</span>
+        </div>
+        <div class="mystic-mini-card">
+          <div class="mystic-mini" data-mystic="mini" data-mystic-tone="folk"></div>
+          <strong>Folk symbol drift</strong>
+          <span>For atmospheric decorative areas.</span>
+        </div>
+      </div>
+    </section>
+
     <section id="open" class="open section">
       <div class="open-card"><div><span class="kicker" data-i18n="open.kicker">Why open?</span><h2 data-i18n="open.title">If this closes, the region loses infrastructure.</h2><p data-i18n="open.text">Järdem AI is not only an app. It is meant to become reusable open infrastructure for Central Asian developers, NGOs, educators, civic-tech teams, and public-interest AI builders.</p></div>
       <div class="open-list"><div><strong data-i18n="open.item1Title">Open code</strong><span data-i18n="open.item1Text">Assistant interface, retrieval pipeline, safety logic, and deployment tools.</span></div><div><strong data-i18n="open.item2Title">Open datasets</strong><span data-i18n="open.item2Text">Public-service questions, scam examples, and document simplification tasks where legally possible.</span></div><div><strong data-i18n="open.item3Title">Open evaluations</strong><span data-i18n="open.item3Text">Benchmarks for Kazakh/Russian mixed-language understanding and practical local use cases.</span></div></div></div>
@@ -147,6 +222,7 @@
 
   <footer class="footer"><span>Järdem AI</span><span data-i18n="footer.tagline">Open AI help for Central Asia</span></footer>
   <script src="i18n.js"></script>
+  <script src="assets/mystic-animation.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
