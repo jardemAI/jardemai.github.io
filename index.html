@@ -41,12 +41,12 @@
   <main id="top">
     <section class="hero section">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">Early open prototype</span></div>
+        <div class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">Early open prototype for Sentient Grants</span></div>
         <h1 data-i18n="hero.title">Open AI help for Central Asia.</h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle">Järdem AI is an open-source, privacy-first assistant that helps people understand documents, avoid scams, and navigate government, legal, financial, and everyday high-stakes situations in Kazakh, Russian, and mixed-language contexts.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#demo" data-i18n="hero.primaryCta">Try interactive demo</a>
-          <a class="btn secondary" href="https://github.com/jardemAI/jardemai.github.io" target="_blank" rel="noreferrer" data-i18n="hero.secondaryCta">View GitHub</a>
+          <a class="btn secondary" href="https://github.com/jardemai" target="_blank" rel="noreferrer" data-i18n="hero.secondaryCta">View GitHub</a>
         </div>
         <div class="trust-row" data-i18n-attr="aria-label:aria.projectPrinciples">
           <span data-i18n="hero.trust1">Open-source</span><span data-i18n="hero.trust2">Local-first</span><span data-i18n="hero.trust3">Privacy-first</span><span data-i18n="hero.trust4">Low-resource languages</span>
@@ -62,6 +62,103 @@
         </div>
       </div>
     </section>
+
+
+    <section class="wide-constellation section" aria-label="Animated Central Asia constellation map" data-i18n-attr="aria-label:aria.constellationMap">
+      <div class="constellation-panel">
+        <div class="constellation-copy">
+          <span class="kicker" data-i18n="map.kicker">Regional signal map</span>
+          <h2 data-i18n="map.title">A living map of open AI routes across Central Asia.</h2>
+          <p data-i18n="map.text">Glowing paths connect languages, public knowledge, local context, and communities that mainstream AI often overlooks.</p>
+        </div>
+
+        <div class="constellation-stage" aria-hidden="true">
+          <div class="map-aurora map-aurora-one"></div>
+          <div class="map-aurora map-aurora-two"></div>
+          <div class="map-aurora map-aurora-three"></div>
+
+          <svg class="central-asia-map" viewBox="0 0 1180 360">
+            <defs>
+              <linearGradient id="wideRouteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8ef5d3" stop-opacity="0.12" />
+                <stop offset="35%" stop-color="#8ef5d3" stop-opacity="0.9" />
+                <stop offset="62%" stop-color="#ffd38e" stop-opacity="1" />
+                <stop offset="100%" stop-color="#c7a6ff" stop-opacity="0.22" />
+              </linearGradient>
+
+              <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#f7f4ec" stop-opacity="1" />
+                <stop offset="42%" stop-color="#8ef5d3" stop-opacity="0.85" />
+                <stop offset="100%" stop-color="#8ef5d3" stop-opacity="0" />
+              </radialGradient>
+
+              <filter id="wideSoftGlow">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <path class="land-line land-line-one" d="M105 210 C178 154, 258 166, 330 124 C432 64, 516 112, 592 98 C694 78, 768 124, 858 106 C940 90, 1010 122, 1086 176" />
+            <path class="land-line land-line-two" d="M92 254 C202 220, 286 250, 394 206 C488 168, 568 230, 656 188 C754 142, 846 202, 932 172 C1002 148, 1060 194, 1114 234" />
+
+            <path class="wide-route route-a" d="M120 238 C232 132, 322 184, 430 116 S650 80, 774 138 S968 128, 1062 210" />
+            <path class="wide-route route-b" d="M164 126 C270 176, 338 270, 492 218 S676 138, 822 206 S986 272, 1092 136" />
+            <path class="wide-route route-c" d="M230 286 C334 214, 430 254, 560 160 S764 74, 948 92" />
+
+            <g class="wide-nodes" filter="url(#wideSoftGlow)">
+              <circle class="node-halo" cx="120" cy="238" r="20" />
+              <circle class="node-main" cx="120" cy="238" r="5" />
+
+              <circle class="node-halo" cx="430" cy="116" r="24" />
+              <circle class="node-main large" cx="430" cy="116" r="7" />
+
+              <circle class="node-halo" cx="560" cy="160" r="22" />
+              <circle class="node-main" cx="560" cy="160" r="6" />
+
+              <circle class="node-halo" cx="774" cy="138" r="26" />
+              <circle class="node-main large" cx="774" cy="138" r="7" />
+
+              <circle class="node-halo" cx="822" cy="206" r="22" />
+              <circle class="node-main" cx="822" cy="206" r="6" />
+
+              <circle class="node-halo" cx="948" cy="92" r="20" />
+              <circle class="node-main" cx="948" cy="92" r="5" />
+
+              <circle class="node-halo" cx="1062" cy="210" r="20" />
+              <circle class="node-main" cx="1062" cy="210" r="5" />
+            </g>
+
+            <g class="wide-labels">
+              <text x="382" y="94">Qazaqstan</text>
+              <text x="748" y="118">Kyrgyzstan</text>
+              <text x="794" y="232">Uzbekistan</text>
+              <text x="904" y="74">Tian Shan</text>
+              <text x="96" y="266">Caspian signal</text>
+            </g>
+
+            <g class="folk-symbols">
+              <path d="M620 254 l18 18 l-18 18 l-18 -18 z" />
+              <path d="M690 80 c16 0 16 24 0 24 c-16 0 -16 -24 0 -24z" />
+              <path d="M320 250 l10 -18 l10 18 l-20 0z" />
+            </g>
+          </svg>
+
+          <div class="map-chip chip-one">
+            <span data-i18n="map.chip1.label">Open route</span>
+            <strong data-i18n="map.chip1.value">public knowledge</strong>
+          </div>
+
+          <div class="map-chip chip-two">
+            <span data-i18n="map.chip2.label">Local signal</span>
+            <strong data-i18n="map.chip2.value">mixed language</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section class="problem section">
       <div class="section-heading"><span class="kicker" data-i18n="problem.kicker">The gap</span><h2 data-i18n="problem.title">AI is powerful. But most of it was not built for how our region actually lives.</h2></div>
@@ -202,7 +299,7 @@
         </div>
       </div></section>
 
-    <section id="contact" class="cta section"><div class="cta-box"><span class="kicker" data-i18n="cta.kicker">Contribute / test / support</span><h2 data-i18n="cta.title">Help build open AI infrastructure for Central Asia.</h2><p data-i18n="cta.text">We are preparing the first public repository, lightweight demo, and initial dataset for scam detection, document simplification, and public-service navigation.</p><div class="hero-actions"><a class="btn primary" href="https://github.com/jardemAI/jardemai.github.io" target="_blank" rel="noreferrer" data-i18n="cta.github">GitHub repository</a><a class="btn secondary" data-i18n="cta.contact">Contact team (Soon)</a></div></div></section>
+    <section id="contact" class="cta section"><div class="cta-box"><span class="kicker" data-i18n="cta.kicker">Contribute / test / support</span><h2 data-i18n="cta.title">Help build open AI infrastructure for Central Asia.</h2><p data-i18n="cta.text">We are preparing the first public repository, lightweight demo, and initial dataset for scam detection, document simplification, and public-service navigation.</p><div class="hero-actions"><a class="btn primary" href="https://github.com/jardemai" target="_blank" rel="noreferrer" data-i18n="cta.github">GitHub repository</a><a class="btn secondary" href="mailto:hello@jardem.ai" data-i18n="cta.contact">Contact team</a></div></div></section>
   </main>
 
   <footer class="footer"><span>Järdem AI</span><span data-i18n="footer.tagline">Open AI help for Central Asia</span></footer>
