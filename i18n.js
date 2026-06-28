@@ -676,7 +676,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const extra = {
     en: {
       "map.kicker": "Regional signal map",
-      "map.title": "A living map of open AI routes across Central Asia.",
       "map.text": "Glowing paths connect languages, public knowledge, local context, and communities that mainstream AI often overlooks.",
       "map.chip1.label": "Open route",
       "map.chip1.value": "public knowledge",
@@ -686,7 +685,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     ru: {
       "map.kicker": "Карта региональных сигналов",
-      "map.title": "Живая карта открытых AI-маршрутов Центральной Азии.",
       "map.text": "Светящиеся пути соединяют языки, публичные знания, локальный контекст и сообщества, которые mainstream AI часто не замечает.",
       "map.chip1.label": "Открытый маршрут",
       "map.chip1.value": "публичные знания",
@@ -696,7 +694,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     kk: {
       "map.kicker": "Аймақтық сигнал картасы",
-      "map.title": "Орталық Азиядағы ашық AI маршруттарының тірі картасы.",
       "map.text": "Жарқыраған жолдар тілдерді, ашық білімді, жергілікті контексті және mainstream AI жиі елемейтін қауымдастықтарды байланыстырады.",
       "map.chip1.label": "Ашық маршрут",
       "map.chip1.value": "ашық білім",
