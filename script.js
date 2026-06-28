@@ -91,3 +91,29 @@ window.addEventListener("resize", () => {
 });
 
 document.addEventListener("DOMContentLoaded", createAmbientParticles);
+
+
+// Gentle interaction for hero principle chips.
+document.addEventListener("DOMContentLoaded", () => {
+  const trustRow = document.querySelector(".trust-row");
+  if (!trustRow) return;
+
+  trustRow.addEventListener("pointermove", (event) => {
+    const rect = trustRow.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 10;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 6;
+
+    trustRow.classList.add("is-interacting");
+    trustRow.querySelectorAll("span").forEach((chip, index) => {
+      const depth = (index + 1) * 0.22;
+      chip.style.transform = `translate3d(${x * depth}px, ${y * depth - 1}px, 0)`;
+    });
+  });
+
+  trustRow.addEventListener("pointerleave", () => {
+    trustRow.classList.remove("is-interacting");
+    trustRow.querySelectorAll("span").forEach((chip) => {
+      chip.style.transform = "";
+    });
+  });
+});

@@ -345,3 +345,168 @@
     animation: none !important;
   }
 }
+
+
+/* Animated principle chips under hero CTA */
+.trust-row {
+  position: relative;
+  isolation: isolate;
+  gap: 12px !important;
+}
+
+.trust-row::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  right: -18px;
+  top: 50%;
+  height: 1px;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(142, 245, 211, 0.22),
+    rgba(255, 211, 142, 0.18),
+    rgba(199, 166, 255, 0.18),
+    transparent
+  );
+  transform: translateY(-50%);
+  opacity: 0.7;
+  animation: principleLineGlow 5.5s ease-in-out infinite;
+}
+
+.trust-row span {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(10px);
+  opacity: 0;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    inset 0 0 24px rgba(255, 255, 255, 0.025),
+    0 10px 28px rgba(0, 0, 0, 0.12);
+  animation:
+    principleChipIn 0.7s ease forwards,
+    principleBreath 4.8s ease-in-out infinite;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.trust-row span:nth-child(1) { animation-delay: 0.10s, 1.10s; }
+.trust-row span:nth-child(2) { animation-delay: 0.24s, 1.35s; }
+.trust-row span:nth-child(3) { animation-delay: 0.38s, 1.60s; }
+.trust-row span:nth-child(4) { animation-delay: 0.52s, 1.85s; }
+
+.trust-row span::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 14px rgba(142, 245, 211, 0.95);
+  transform: translateY(-50%) scale(0);
+  opacity: 0;
+  transition: 0.22s ease;
+}
+
+.trust-row span::after {
+  content: "";
+  position: absolute;
+  inset: -40% -70%;
+  background: linear-gradient(
+    110deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.18) 48%,
+    rgba(142, 245, 211, 0.20) 52%,
+    transparent 62%
+  );
+  transform: translateX(-70%) rotate(10deg);
+  animation: chipShimmer 6.5s ease-in-out infinite;
+  animation-delay: inherit;
+}
+
+.trust-row span:hover {
+  color: var(--text);
+  border-color: rgba(142, 245, 211, 0.46);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(142, 245, 211, 0.16), transparent 34%),
+    rgba(255, 255, 255, 0.075);
+  box-shadow:
+    0 0 28px rgba(142, 245, 211, 0.12),
+    inset 0 0 30px rgba(142, 245, 211, 0.045);
+  transform: translateY(-3px);
+}
+
+.trust-row span:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+.trust-row span:hover {
+  padding-left: 25px;
+}
+
+@keyframes principleChipIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes principleBreath {
+  0%, 100% {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    border-color: rgba(142, 245, 211, 0.30);
+  }
+}
+
+@keyframes principleLineGlow {
+  0%, 100% {
+    opacity: 0.35;
+    filter: blur(0);
+  }
+  50% {
+    opacity: 0.85;
+    filter: blur(0.4px);
+  }
+}
+
+@keyframes chipShimmer {
+  0%, 62%, 100% {
+    transform: translateX(-76%) rotate(10deg);
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  84% {
+    transform: translateX(76%) rotate(10deg);
+    opacity: 0;
+  }
+}
+
+/* Tiny cursor-reactive glow for principle chips */
+.trust-row.is-interacting span {
+  animation-play-state: running;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trust-row::before,
+  .trust-row span,
+  .trust-row span::after {
+    animation: none !important;
+  }
+
+  .trust-row span {
+    opacity: 1;
+    transform: none;
+  }
+}
