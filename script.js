@@ -56,11 +56,38 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-function createAmbientParticles(){const layer=document.querySelector('.ambient-particles');if(!layer)return;const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(reduceMotion)return;const particleCount=window.innerWidth<700?18:34;layer.innerHTML='';for(let i=0;i<particleCount;i++){const p=document.createElement('span');const duration=14+Math.random()*16;p.style.left=`${Math.random()*100}%`;p.style.bottom=`${-10-Math.random()*30}%`;const size=2+Math.random()*3;p.style.width=`${size}px`;p.style.height=`${size}px`;p.style.setProperty('--duration',`${duration}s`);p.style.setProperty('--delay',`${Math.random()*-duration}s`);p.style.setProperty('--drift',`${-60+Math.random()*120}px`);layer.appendChild(p)}}
-window.addEventListener('resize',()=>{window.clearTimeout(window.__particleResizeTimer);window.__particleResizeTimer=window.setTimeout(createAmbientParticles,250)});document.addEventListener('DOMContentLoaded',createAmbientParticles);
+function createAmbientParticles() {
+  const layer = document.querySelector(".ambient-particles");
+  if (!layer) return;
 
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) return;
 
-// Polished update: remove legacy sound controls if any previous HTML/JS is cached.
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("#soundToggle, .sound-toggle, [data-sound]").forEach((element) => element.remove());
+  const particleCount = window.innerWidth < 700 ? 18 : 34;
+  layer.innerHTML = "";
+
+  for (let i = 0; i < particleCount; i += 1) {
+    const particle = document.createElement("span");
+    const left = Math.random() * 100;
+    const duration = 14 + Math.random() * 16;
+    const delay = Math.random() * -duration;
+    const drift = -60 + Math.random() * 120;
+    const size = 2 + Math.random() * 3;
+
+    particle.style.left = `${left}%`;
+    particle.style.bottom = `${-10 - Math.random() * 30}%`;
+    particle.style.setProperty("--duration", `${duration}s`);
+    particle.style.setProperty("--delay", `${delay}s`);
+    particle.style.setProperty("--drift", `${drift}px`);
+    particle.style.setProperty("--size", `${size}px`);
+
+    layer.appendChild(particle);
+  }
+}
+
+window.addEventListener("resize", () => {
+  window.clearTimeout(window.__particleResizeTimer);
+  window.__particleResizeTimer = window.setTimeout(createAmbientParticles, 250);
 });
+
+document.addEventListener("DOMContentLoaded", createAmbientParticles);
