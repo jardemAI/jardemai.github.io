@@ -126,7 +126,7 @@ const translations = {
     "demoScenarios": {
       "scam": {
         "label": "Scam check",
-        "title": "Check suspicious messages before you click.",
+        "title": "Check suspicious messages before you click",
         "input": "I received an SMS: “Your Kaspi account is blocked. Confirm your data through this link.” Is this real?",
         "messages": [
           {
@@ -307,7 +307,7 @@ const translations = {
     "demoScenarios": {
       "scam": {
         "label": "Проверка скама",
-        "title": "Проверьте подозрительное сообщение до клика.",
+        "title": "Проверьте подозрительное сообщение до клика",
         "input": "Мне пришло SMS: «Ваш Kaspi аккаунт заблокирован. Подтвердите данные по ссылке». Это правда?",
         "messages": [
           {
@@ -488,7 +488,7 @@ const translations = {
     "demoScenarios": {
       "scam": {
         "label": "Алаяқтықты тексеру",
-        "title": "Күдікті хабарламаны баспай тұрып тексеріңіз.",
+        "title": "Күдікті хабарламаны баспай тұрып тексеріңіз",
         "input": "Маған SMS келді: «Kaspi аккаунтыңыз бұғатталды. Деректерді сілтеме арқылы растаңыз». Бұл рас па?",
         "messages": [
           {
