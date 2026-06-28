@@ -3,295 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Järdem AI — Open AI Help for Central Asia</title>
-  <meta name="description" content="Järdem AI is an open-source, privacy-first AI assistant that helps Central Asian users understand documents, avoid scams, and navigate public services in their own languages." />
-  <meta property="og:title" content="Järdem AI — Open AI Help for Central Asia" />
-  <meta property="og:description" content="An open-source, privacy-first AI assistant for Kazakh, Russian, and mixed-language users." />
+  <title data-i18n="meta.title">Järdem AI — Open AI Help for Central Asia</title>
+  <meta name="description" content="Open AI help for Central Asia" data-i18n-attr="content:meta.description" />
+  <meta property="og:title" content="Järdem AI — Open AI Help for Central Asia" data-i18n-attr="content:meta.title" />
+  <meta property="og:description" content="Open-source, privacy-first AI assistant for Central Asia" data-i18n-attr="content:meta.description" />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#101827" />
+  <link rel="canonical" href="https://jardemai.github.io/" />
+  <link rel="alternate" hreflang="en" href="https://jardemai.github.io/?lang=en" />
+  <link rel="alternate" hreflang="ru" href="https://jardemai.github.io/?lang=ru" />
+  <link rel="alternate" hreflang="kk" href="https://jardemai.github.io/?lang=kk" />
+  <link rel="alternate" hreflang="x-default" href="https://jardemai.github.io/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
   <div class="noise"></div>
-
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Järdem AI home">
-      <span class="brand-mark">J</span>
-      <span>Järdem AI</span>
-    </a>
-
+    <a class="brand" href="#top" data-i18n-attr="aria-label:aria.home"><span class="brand-mark">J</span><span>Järdem AI</span></a>
     <nav class="nav">
-      <a href="#demo">Demo</a>
-      <a href="#open">Open</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#contact">Contact</a>
+      <a href="#demo" data-i18n="nav.demo">Demo</a>
+      <a href="#open" data-i18n="nav.open">Open</a>
+      <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
-
-    <a class="header-cta" href="#demo">Try demo</a>
+    <div class="header-actions">
+      <div class="language-switcher" data-i18n-attr="aria-label:aria.languageSwitcher">
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="kk">KZ</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a class="header-cta" href="#demo" data-i18n="nav.tryDemo">Try demo</a>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero section">
       <div class="hero-copy">
-        <div class="eyebrow">
-          <span class="dot"></span>
-          Early open prototype for Sentient Grants
-        </div>
-
-        <h1>Open AI help for Central Asia.</h1>
-
-        <p class="hero-subtitle">
-          Järdem AI is an open-source, privacy-first assistant that helps people understand documents,
-          avoid scams, and navigate government, legal, financial, and everyday high-stakes situations
-          in Kazakh, Russian, and mixed-language contexts.
-        </p>
-
+        <div class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">Early open prototype for Sentient Grants</span></div>
+        <h1 data-i18n="hero.title">Open AI help for Central Asia.</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Järdem AI is an open-source, privacy-first assistant that helps people understand documents, avoid scams, and navigate government, legal, financial, and everyday high-stakes situations in Kazakh, Russian, and mixed-language contexts.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#demo">Try interactive demo</a>
-          <a class="btn secondary" href="https://jardemai.github.io" target="_blank" rel="noreferrer">View GitHub</a>
+          <a class="btn primary" href="#demo" data-i18n="hero.primaryCta">Try interactive demo</a>
+          <a class="btn secondary" href="https://github.com/jardemai" target="_blank" rel="noreferrer" data-i18n="hero.secondaryCta">View GitHub</a>
         </div>
-
-        <div class="trust-row" aria-label="Project principles">
-          <span>Open-source</span>
-          <span>Local-first</span>
-          <span>Privacy-first</span>
-          <span>Low-resource languages</span>
+        <div class="trust-row" data-i18n-attr="aria-label:aria.projectPrinciples">
+          <span data-i18n="hero.trust1">Open-source</span><span data-i18n="hero.trust2">Local-first</span><span data-i18n="hero.trust3">Privacy-first</span><span data-i18n="hero.trust4">Low-resource languages</span>
         </div>
       </div>
-
-      <div class="hero-card" aria-label="Järdem AI product preview">
+      <div class="hero-card">
         <div class="phone-window">
-          <div class="phone-top">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="chat-label">Järdem AI assistant</div>
-          <div class="message user">
-            Мне пришло SMS: “Ваш Kaspi аккаунт заблокирован, подтвердите данные по ссылке”. Это правда?
-          </div>
-          <div class="message ai">
-            Похоже на высокий риск мошенничества. Не открывайте ссылку и не вводите данные карты. Откройте официальный app вручную и проверьте уведомления там.
-          </div>
-          <div class="risk">
-            <span>Risk level</span>
-            <strong>High</strong>
-          </div>
+          <div class="phone-top"><span></span><span></span><span></span></div>
+          <div class="chat-label" data-i18n="hero.previewLabel">Järdem AI assistant</div>
+          <div class="message user" data-i18n="hero.previewUser">I received an SMS: “Your Kaspi account is blocked, confirm your data through this link.” Is this real?</div>
+          <div class="message ai" data-i18n="hero.previewAi">This looks like a high-risk scam. Do not open the link or enter card data. Open the official app manually and check notifications there.</div>
+          <div class="risk"><span data-i18n="hero.riskLabel">Risk level</span><strong data-i18n="hero.riskValue">High</strong></div>
         </div>
       </div>
     </section>
 
     <section class="problem section">
-      <div class="section-heading">
-        <span class="kicker">The gap</span>
-        <h2>AI is powerful. But most of it was not built for how our region actually lives.</h2>
-      </div>
-
+      <div class="section-heading"><span class="kicker" data-i18n="problem.kicker">The gap</span><h2 data-i18n="problem.title">AI is powerful. But most of it was not built for how our region actually lives.</h2></div>
       <div class="grid three">
-        <article class="tile">
-          <h3>Language mismatch</h3>
-          <p>People switch between Kazakh, Russian, slang, screenshots, voice notes, and short messy questions. Most AI products expect polished English prompts.</p>
-        </article>
-
-        <article class="tile">
-          <h3>Confusing public information</h3>
-          <p>Official services and legal procedures exist, but are often fragmented, formal, and hard to understand for ordinary users.</p>
-        </article>
-
-        <article class="tile">
-          <h3>Privacy and trust</h3>
-          <p>Users may need help with documents, finances, scams, health, or legal situations — exactly the data that should not depend on a closed black-box system.</p>
-        </article>
+        <article class="tile"><h3 data-i18n="problem.card1Title">Language mismatch</h3><p data-i18n="problem.card1Text">People switch between Kazakh, Russian, slang, screenshots, voice notes, and short messy questions. Most AI products expect polished English prompts.</p></article>
+        <article class="tile"><h3 data-i18n="problem.card2Title">Confusing public information</h3><p data-i18n="problem.card2Text">Official services and legal procedures exist, but are often fragmented, formal, and hard to understand for ordinary users.</p></article>
+        <article class="tile"><h3 data-i18n="problem.card3Title">Privacy and trust</h3><p data-i18n="problem.card3Text">Users may need help with documents, finances, scams, health, or legal situations — exactly the data that should not depend on a closed black-box system.</p></article>
       </div>
     </section>
 
     <section id="demo" class="demo section">
-      <div class="section-heading center">
-        <span class="kicker">Interactive prototype</span>
-        <h2>Try three early Järdem AI scenarios</h2>
-        <p>
-          This demo shows the initial product direction: scam detection, document simplification,
-          and public-service navigation for Kazakhstan-focused users.
-        </p>
-      </div>
-
+      <div class="section-heading center"><span class="kicker" data-i18n="demo.kicker">Interactive prototype</span><h2 data-i18n="demo.title">Try three early Järdem AI scenarios</h2><p data-i18n="demo.subtitle">This demo shows the initial product direction: scam detection, document simplification, and public-service navigation for Kazakhstan-focused users.</p></div>
       <div class="demo-shell">
-        <aside class="scenario-tabs" aria-label="Demo scenarios">
-          <button class="scenario-tab active" data-scenario="scam">
-            <span>01</span>
-            Scam check
-          </button>
-          <button class="scenario-tab" data-scenario="document">
-            <span>02</span>
-            Explain a document
-          </button>
-          <button class="scenario-tab" data-scenario="service">
-            <span>03</span>
-            Public-service guide
-          </button>
+        <aside class="scenario-tabs" data-i18n-attr="aria-label:aria.demoScenarios">
+          <button class="scenario-tab active" data-scenario="scam"><span>01</span><span data-i18n="demo.tabScam">Scam check</span></button>
+          <button class="scenario-tab" data-scenario="document"><span>02</span><span data-i18n="demo.tabDocument">Explain a document</span></button>
+          <button class="scenario-tab" data-scenario="service"><span>03</span><span data-i18n="demo.tabService">Public-service guide</span></button>
         </aside>
-
         <div class="demo-panel">
-          <div class="demo-header">
-            <div>
-              <p class="demo-label" id="demoLabel">Scam check</p>
-              <h3 id="demoTitle">Check suspicious messages before you click.</h3>
-            </div>
-            <div class="status-pill">Prototype</div>
-          </div>
-
+          <div class="demo-header"><div><p class="demo-label" id="demoLabel">Scam check</p><h3 id="demoTitle">Check suspicious messages before you click.</h3></div><div class="status-pill" data-i18n="demo.status">Prototype</div></div>
           <div class="chat-box" id="chatBox" aria-live="polite"></div>
-
-          <div class="input-row">
-            <input id="demoInput" type="text" readonly value="" aria-label="Demo prompt" />
-            <button id="runDemo">Run demo</button>
-          </div>
-
-          <p class="demo-note">
-            Demo responses are scripted for the current prototype. The full assistant will connect open models,
-            retrieval from trusted sources, and safety checks.
-          </p>
+          <div class="input-row"><input id="demoInput" type="text" readonly data-i18n-attr="aria-label:aria.demoPrompt" /><button id="runDemo" data-i18n="demo.runButton">Run demo</button></div>
+          <p class="demo-note" data-i18n="demo.note">Demo responses are scripted for the current prototype. The full assistant will connect open models, retrieval from trusted sources, and safety checks.</p>
         </div>
       </div>
     </section>
 
     <section class="features section">
-      <div class="section-heading">
-        <span class="kicker">Product</span>
-        <h2>Built for practical, high-stakes everyday questions.</h2>
-      </div>
-
+      <div class="section-heading"><span class="kicker" data-i18n="features.kicker">Product</span><h2 data-i18n="features.title">Built for practical, high-stakes everyday questions.</h2></div>
       <div class="grid two">
-        <article class="feature-card">
-          <div class="icon">✦</div>
-          <h3>Plain-language explanations</h3>
-          <p>Turn official instructions, documents, and procedures into simple steps people can actually follow.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="icon">⌁</div>
-          <h3>Scam pattern detection</h3>
-          <p>Help users understand suspicious messages, fake links, social engineering, and common fraud patterns.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="icon">◌</div>
-          <h3>Mixed-language understanding</h3>
-          <p>Support Kazakh, Russian, and mixed local communication instead of forcing perfect formal language.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="icon">▣</div>
-          <h3>Local-first architecture</h3>
-          <p>Move toward lightweight, offline-capable AI for sensitive contexts and unstable internet environments.</p>
-        </article>
+        <article class="feature-card"><div class="icon">✦</div><h3 data-i18n="features.card1Title">Plain-language explanations</h3><p data-i18n="features.card1Text">Turn official instructions, documents, and procedures into simple steps people can actually follow.</p></article>
+        <article class="feature-card"><div class="icon">⌁</div><h3 data-i18n="features.card2Title">Scam pattern detection</h3><p data-i18n="features.card2Text">Help users understand suspicious messages, fake links, social engineering, and common fraud patterns.</p></article>
+        <article class="feature-card"><div class="icon">◌</div><h3 data-i18n="features.card3Title">Mixed-language understanding</h3><p data-i18n="features.card3Text">Support Kazakh, Russian, and mixed local communication instead of forcing perfect formal language.</p></article>
+        <article class="feature-card"><div class="icon">▣</div><h3 data-i18n="features.card4Title">Local-first architecture</h3><p data-i18n="features.card4Text">Move toward lightweight, offline-capable AI for sensitive contexts and unstable internet environments.</p></article>
       </div>
     </section>
 
     <section id="open" class="open section">
-      <div class="open-card">
-        <div>
-          <span class="kicker">Why open?</span>
-          <h2>If this closes, the region loses infrastructure.</h2>
-          <p>
-            Järdem AI is not only an app. It is meant to become reusable open infrastructure for Central Asian
-            developers, NGOs, educators, civic-tech teams, and public-interest AI builders.
-          </p>
-        </div>
-
-        <div class="open-list">
-          <div>
-            <strong>Open code</strong>
-            <span>Assistant interface, retrieval pipeline, safety logic, and deployment tools.</span>
-          </div>
-          <div>
-            <strong>Open datasets</strong>
-            <span>Public-service questions, scam examples, and document simplification tasks where legally possible.</span>
-          </div>
-          <div>
-            <strong>Open evaluations</strong>
-            <span>Benchmarks for Kazakh/Russian mixed-language understanding and practical local use cases.</span>
-          </div>
-        </div>
-      </div>
+      <div class="open-card"><div><span class="kicker" data-i18n="open.kicker">Why open?</span><h2 data-i18n="open.title">If this closes, the region loses infrastructure.</h2><p data-i18n="open.text">Järdem AI is not only an app. It is meant to become reusable open infrastructure for Central Asian developers, NGOs, educators, civic-tech teams, and public-interest AI builders.</p></div>
+      <div class="open-list"><div><strong data-i18n="open.item1Title">Open code</strong><span data-i18n="open.item1Text">Assistant interface, retrieval pipeline, safety logic, and deployment tools.</span></div><div><strong data-i18n="open.item2Title">Open datasets</strong><span data-i18n="open.item2Text">Public-service questions, scam examples, and document simplification tasks where legally possible.</span></div><div><strong data-i18n="open.item3Title">Open evaluations</strong><span data-i18n="open.item3Text">Benchmarks for Kazakh/Russian mixed-language understanding and practical local use cases.</span></div></div></div>
     </section>
 
     <section id="roadmap" class="roadmap section">
-      <div class="section-heading center">
-        <span class="kicker">Roadmap</span>
-        <h2>From demo to open local AI stack.</h2>
-      </div>
-
+      <div class="section-heading center"><span class="kicker" data-i18n="roadmap.kicker">Roadmap</span><h2 data-i18n="roadmap.title">From demo to open local AI stack.</h2></div>
       <div class="timeline">
-        <div class="step">
-          <span>Phase 1</span>
-          <h3>Public demo</h3>
-          <p>Landing page, interactive scenarios, GitHub repository, early prompt logic, and Kazakhstan-focused use cases.</p>
-        </div>
-
-        <div class="step">
-          <span>Phase 2</span>
-          <h3>Open prototype</h3>
-          <p>Web assistant, scam-check module, document explanation module, public-service navigation, and small evaluation dataset.</p>
-        </div>
-
-        <div class="step">
-          <span>Phase 3</span>
-          <h3>Local-first AI</h3>
-          <p>Lightweight model experiments, offline selected tasks, mixed-language benchmark, and community contributions.</p>
-        </div>
-
-        <div class="step">
-          <span>Phase 4</span>
-          <h3>Central Asia expansion</h3>
-          <p>Uzbek and Kyrgyz support, NGO partnerships, more public datasets, developer tools, and documentation.</p>
-        </div>
+        <div class="step"><span data-i18n="roadmap.phase1Label">Phase 1</span><h3 data-i18n="roadmap.phase1Title">Public demo</h3><p data-i18n="roadmap.phase1Text">Landing page, interactive scenarios, GitHub repository, early prompt logic, and Kazakhstan-focused use cases.</p></div>
+        <div class="step"><span data-i18n="roadmap.phase2Label">Phase 2</span><h3 data-i18n="roadmap.phase2Title">Open prototype</h3><p data-i18n="roadmap.phase2Text">Web assistant, scam-check module, document explanation module, public-service navigation, and small evaluation dataset.</p></div>
+        <div class="step"><span data-i18n="roadmap.phase3Label">Phase 3</span><h3 data-i18n="roadmap.phase3Title">Local-first AI</h3><p data-i18n="roadmap.phase3Text">Lightweight model experiments, offline selected tasks, mixed-language benchmark, and community contributions.</p></div>
+        <div class="step"><span data-i18n="roadmap.phase4Label">Phase 4</span><h3 data-i18n="roadmap.phase4Title">Central Asia expansion</h3><p data-i18n="roadmap.phase4Text">Uzbek and Kyrgyz support, NGO partnerships, more public datasets, developer tools, and documentation.</p></div>
       </div>
     </section>
 
-    <section class="audience section">
-      <div class="section-heading">
-        <span class="kicker">Who it helps</span>
-        <h2>Designed for people and builders underserved by mainstream AI.</h2>
-      </div>
+    <section class="audience section"><div class="section-heading"><span class="kicker" data-i18n="audience.kicker">Who it helps</span><h2 data-i18n="audience.title">Designed for people and builders underserved by mainstream AI.</h2></div><div class="audience-tags"><span data-i18n="audience.tag1">Citizens</span><span data-i18n="audience.tag2">Elderly users</span><span data-i18n="audience.tag3">Low-digital-literacy users</span><span data-i18n="audience.tag4">Students</span><span data-i18n="audience.tag5">Migrants</span><span data-i18n="audience.tag6">Families</span><span data-i18n="audience.tag7">Small business owners</span><span data-i18n="audience.tag8">NGOs</span><span data-i18n="audience.tag9">Civic-tech builders</span><span data-i18n="audience.tag10">Open-source developers</span></div></section>
 
-      <div class="audience-tags">
-        <span>Citizens</span>
-        <span>Elderly users</span>
-        <span>Low-digital-literacy users</span>
-        <span>Students</span>
-        <span>Migrants</span>
-        <span>Families</span>
-        <span>Small business owners</span>
-        <span>NGOs</span>
-        <span>Civic-tech builders</span>
-        <span>Open-source developers</span>
-        <span>Central Asian language researchers</span>
-      </div>
-    </section>
-
-    <section id="contact" class="cta section">
-      <div class="cta-box">
-        <span class="kicker">Contribute / test / support</span>
-        <h2>Help build open AI infrastructure for Central Asia.</h2>
-        <p>
-          We are preparing the first public repository, lightweight demo, and initial dataset for scam detection,
-          document simplification, and public-service navigation.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn primary" href="https://github.com/jardemAI/jardemai.github.io" target="_blank" rel="noreferrer">GitHub repository</a>
-          <a class="btn secondary">Contact team (Soon)</a>
-        </div>
-      </div>
-    </section>
+    <section id="contact" class="cta section"><div class="cta-box"><span class="kicker" data-i18n="cta.kicker">Contribute / test / support</span><h2 data-i18n="cta.title">Help build open AI infrastructure for Central Asia.</h2><p data-i18n="cta.text">We are preparing the first public repository, lightweight demo, and initial dataset for scam detection, document simplification, and public-service navigation.</p><div class="hero-actions"><a class="btn primary" href="https://github.com/jardemai" target="_blank" rel="noreferrer" data-i18n="cta.github">GitHub repository</a><a class="btn secondary" href="mailto:hello@jardem.ai" data-i18n="cta.contact">Contact team</a></div></div></section>
   </main>
 
-  <footer class="footer">
-    <span>Järdem AI</span>
-    <span>Open AI help for Central Asia</span>
-  </footer>
-
+  <footer class="footer"><span>Järdem AI</span><span data-i18n="footer.tagline">Open AI help for Central Asia</span></footer>
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
