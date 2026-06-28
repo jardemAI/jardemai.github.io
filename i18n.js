@@ -93,6 +93,19 @@ const translations = {
     "roadmap.phase4Text": "Uzbek and Kyrgyz support, NGO partnerships, more public datasets, developer tools, and documentation.",
     "audience.kicker": "Who it helps",
     "audience.title": "Designed for people and builders underserved by mainstream AI.",
+
+    "audience.tags.citizens": "Citizens",
+    "audience.tags.elderly": "Elderly users",
+    "audience.tags.lowDigital": "Low-digital-literacy users",
+    "audience.tags.students": "Students",
+    "audience.tags.migrants": "Migrants",
+    "audience.tags.families": "Families",
+    "audience.tags.smallBusiness": "Small business owners",
+    "audience.tags.ngos": "NGOs",
+    "audience.tags.civic": "Civic-tech builders",
+    "audience.tags.developers": "Open-source developers",
+    "audience.tags.researchers": "Central Asian language researchers",
+
     "audience.tag1": "Citizens",
     "audience.tag2": "Elderly users",
     "audience.tag3": "Low-digital-literacy users",
@@ -260,6 +273,19 @@ const translations = {
     "roadmap.phase4Text": "Поддержка узбекского и кыргызского, партнёрства с НПО, больше публичных датасетов, developer tools и документация.",
     "audience.kicker": "Кому помогает",
     "audience.title": "Для людей и команд, которых mainstream AI обычно игнорирует.",
+
+    "audience.tags.citizens": "Граждане",
+    "audience.tags.elderly": "Пожилые пользователи",
+    "audience.tags.lowDigital": "Люди с низкой цифровой грамотностью",
+    "audience.tags.students": "Студенты",
+    "audience.tags.migrants": "Мигранты",
+    "audience.tags.families": "Семьи",
+    "audience.tags.smallBusiness": "Малый бизнес",
+    "audience.tags.ngos": "НПО",
+    "audience.tags.civic": "Civic-tech команды",
+    "audience.tags.developers": "Open-source разработчики",
+    "audience.tags.researchers": "Исследователи языков Центральной Азии",
+
     "audience.tag1": "Граждане",
     "audience.tag2": "Пожилые пользователи",
     "audience.tag3": "Люди с низкой цифровой грамотностью",
@@ -427,6 +453,19 @@ const translations = {
     "roadmap.phase4Text": "Өзбек және қырғыз тілдерін қолдау, ҮЕҰ серіктестігі, көбірек ашық датасет, developer tools және құжаттама.",
     "audience.kicker": "Кімге көмектеседі",
     "audience.title": "Mainstream AI жиі елемейтін адамдар мен командаларға арналған.",
+
+    "audience.tags.citizens": "Азаматтар",
+    "audience.tags.elderly": "Егде пайдаланушылар",
+    "audience.tags.lowDigital": "Цифрлық сауаты төмен адамдар",
+    "audience.tags.students": "Студенттер",
+    "audience.tags.migrants": "Мигранттар",
+    "audience.tags.families": "Отбасылар",
+    "audience.tags.smallBusiness": "Шағын бизнес",
+    "audience.tags.ngos": "ҮЕҰ",
+    "audience.tags.civic": "Civic-tech командалар",
+    "audience.tags.developers": "Open-source әзірлеушілер",
+    "audience.tags.researchers": "Орталық Азия тілдерін зерттеушілер",
+
     "audience.tag1": "Азаматтар",
     "audience.tag2": "Егде пайдаланушылар",
     "audience.tag3": "Цифрлық сауаты төмен адамдар",
@@ -574,3 +613,56 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
 });
+
+
+// Safety supplement for audience marquee translations.
+(function supplementAudienceTranslations() {
+  const extra = {
+    en: {
+      "audience.tags.citizens": "Citizens",
+      "audience.tags.elderly": "Elderly users",
+      "audience.tags.lowDigital": "Low-digital-literacy users",
+      "audience.tags.students": "Students",
+      "audience.tags.migrants": "Migrants",
+      "audience.tags.families": "Families",
+      "audience.tags.smallBusiness": "Small business owners",
+      "audience.tags.ngos": "NGOs",
+      "audience.tags.civic": "Civic-tech builders",
+      "audience.tags.developers": "Open-source developers",
+      "audience.tags.researchers": "Central Asian language researchers"
+    },
+    ru: {
+      "audience.tags.citizens": "Граждане",
+      "audience.tags.elderly": "Пожилые пользователи",
+      "audience.tags.lowDigital": "Люди с низкой цифровой грамотностью",
+      "audience.tags.students": "Студенты",
+      "audience.tags.migrants": "Мигранты",
+      "audience.tags.families": "Семьи",
+      "audience.tags.smallBusiness": "Малый бизнес",
+      "audience.tags.ngos": "НПО",
+      "audience.tags.civic": "Civic-tech команды",
+      "audience.tags.developers": "Open-source разработчики",
+      "audience.tags.researchers": "Исследователи языков Центральной Азии"
+    },
+    kk: {
+      "audience.tags.citizens": "Азаматтар",
+      "audience.tags.elderly": "Егде пайдаланушылар",
+      "audience.tags.lowDigital": "Цифрлық сауаты төмен адамдар",
+      "audience.tags.students": "Студенттер",
+      "audience.tags.migrants": "Мигранттар",
+      "audience.tags.families": "Отбасылар",
+      "audience.tags.smallBusiness": "Шағын бизнес",
+      "audience.tags.ngos": "ҮЕҰ",
+      "audience.tags.civic": "Civic-tech командалар",
+      "audience.tags.developers": "Open-source әзірлеушілер",
+      "audience.tags.researchers": "Орталық Азия тілдерін зерттеушілер"
+    }
+  };
+
+  if (typeof translations !== "undefined") {
+    Object.keys(extra).forEach((lang) => {
+      translations[lang] = translations[lang] || {};
+      Object.assign(translations[lang], extra[lang]);
+    });
+  }
+})();
