@@ -117,3 +117,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// Final visual guard: never show raw i18n keys in the map block.
+document.addEventListener("DOMContentLoaded", () => {
+  const fallbackText = {
+    "map.kicker": "Regional signal map",
+    "map.title": "A living map of open AI routes across Central Asia.",
+    "map.text": "Glowing paths connect languages, public knowledge, local context, and communities that mainstream AI often overlooks.",
+    "map.chip1.label": "Open route",
+    "map.chip1.value": "public knowledge",
+    "map.chip2.label": "Local signal",
+    "map.chip2.value": "mixed language"
+  };
+
+  document.querySelectorAll(".wide-constellation [data-i18n]").forEach((el) => {
+    const text = el.textContent.trim();
+    if (fallbackText[text]) el.textContent = fallbackText[text];
+  });
+});

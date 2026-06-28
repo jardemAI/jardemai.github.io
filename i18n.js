@@ -3,7 +3,7 @@ const SUPPORTED_LANGUAGES = ['ru', 'kk', 'en'];
 const DEFAULT_LANGUAGE = 'en';
 const translations = {
   "en": {
-    "meta.title": "Järdem AI - Open AI Help for Central Asia",
+    "meta.title": "Järdem AI — Open AI Help for Central Asia",
     "meta.description": "Järdem AI is an open-source, privacy-first AI assistant that helps Central Asian users understand documents, avoid scams, and navigate public services in their own languages.",
     "aria.home": "Järdem AI home",
     "aria.languageSwitcher": "Language switcher",
@@ -18,7 +18,7 @@ const translations = {
     "nav.roadmap": "Roadmap",
     "nav.contact": "Contact",
     "nav.tryDemo": "Try demo",
-    "hero.eyebrow": "Early open prototype",
+    "hero.eyebrow": "Early open prototype for Sentient Grants",
     "hero.title": "Open AI help for Central Asia.",
     "hero.subtitle": "Järdem AI is an open-source, privacy-first assistant that helps people understand documents, avoid scams, and navigate government, legal, financial, and everyday high-stakes situations in Kazakh, Russian, and mixed-language contexts.",
     "hero.primaryCta": "Try interactive demo",
@@ -39,7 +39,7 @@ const translations = {
     "problem.card2Title": "Confusing public information",
     "problem.card2Text": "Official services and legal procedures exist, but are often fragmented, formal, and hard to understand for ordinary users.",
     "problem.card3Title": "Privacy and trust",
-    "problem.card3Text": "Users may need help with documents, finances, scams, health, or legal situations - exactly the data that should not depend on a closed black-box system.",
+    "problem.card3Text": "Users may need help with documents, finances, scams, health, or legal situations — exactly the data that should not depend on a closed black-box system.",
     "demo.kicker": "Interactive prototype",
     "demo.title": "Try three early Järdem AI scenarios",
     "demo.subtitle": "This demo shows the initial product direction: scam detection, document simplification, and public-service navigation for Kazakhstan-focused users.",
@@ -184,8 +184,8 @@ const translations = {
     }
   },
   "ru": {
-    "meta.title": "Järdem AI - открытая AI-помощь для Центральной Азии",
-    "meta.description": "Järdem AI - open-source AI-помощник с фокусом на приватность: помогает понимать документы, распознавать мошенничество и ориентироваться в госуслугах.",
+    "meta.title": "Järdem AI — открытая AI-помощь для Центральной Азии",
+    "meta.description": "Järdem AI — open-source AI-помощник с фокусом на приватность: помогает понимать документы, распознавать мошенничество и ориентироваться в госуслугах.",
     "aria.home": "Главная страница Järdem AI",
     "aria.languageSwitcher": "Переключатель языка",
     "aria.projectPrinciples": "Принципы проекта",
@@ -199,9 +199,9 @@ const translations = {
     "nav.roadmap": "План",
     "nav.contact": "Контакты",
     "nav.tryDemo": "Попробовать",
-    "hero.eyebrow": "Ранний открытый прототип",
+    "hero.eyebrow": "Ранний открытый прототип для Sentient Grants",
     "hero.title": "Открытая AI-помощь для Центральной Азии.",
-    "hero.subtitle": "Järdem AI - open-source помощник с фокусом на приватность. Он помогает людям понимать документы, избегать мошенничества и ориентироваться в государственных, юридических, финансовых и бытовых ситуациях на казахском, русском и смешанном локальном языке.",
+    "hero.subtitle": "Järdem AI — open-source помощник с фокусом на приватность. Он помогает людям понимать документы, избегать мошенничества и ориентироваться в государственных, юридических, финансовых и бытовых ситуациях на казахском, русском и смешанном локальном языке.",
     "hero.primaryCta": "Попробовать демо",
     "hero.secondaryCta": "Открыть GitHub",
     "hero.trust1": "Open-source",
@@ -220,7 +220,7 @@ const translations = {
     "problem.card2Title": "Сложная публичная информация",
     "problem.card2Text": "Госуслуги и юридические процедуры существуют, но информация часто разбросана, написана формально и непонятна обычным людям.",
     "problem.card3Title": "Приватность и доверие",
-    "problem.card3Text": "Пользователям нужна помощь с документами, финансами, мошенничеством, здоровьем или правовыми вопросами - именно такие данные не должны зависеть от закрытой чёрной коробки.",
+    "problem.card3Text": "Пользователям нужна помощь с документами, финансами, мошенничеством, здоровьем или правовыми вопросами — именно такие данные не должны зависеть от закрытой чёрной коробки.",
     "demo.kicker": "Интерактивный прототип",
     "demo.title": "Попробуйте три ранних сценария Järdem AI",
     "demo.subtitle": "Это демо показывает первое направление продукта: проверка мошенничества, упрощение документов и навигация по госуслугам для пользователей в Казахстане.",
@@ -252,7 +252,7 @@ const translations = {
     "features.card4Text": "Движется к лёгкому offline-capable AI для чувствительных ситуаций и нестабильного интернета.",
     "open.kicker": "Почему open?",
     "open.title": "Если это закрыть, регион потеряет инфраструктуру.",
-    "open.text": "Järdem AI - это не только приложение. Это будущая открытая инфраструктура для разработчиков Центральной Азии, НПО, образовательных проектов, civic-tech команд и public-interest AI.",
+    "open.text": "Järdem AI — это не только приложение. Это будущая открытая инфраструктура для разработчиков Центральной Азии, НПО, образовательных проектов, civic-tech команд и public-interest AI.",
     "open.item1Title": "Открытый код",
     "open.item1Text": "Интерфейс помощника, retrieval pipeline, safety-логика и инструменты деплоя.",
     "open.item2Title": "Открытые датасеты",
@@ -365,8 +365,8 @@ const translations = {
     }
   },
   "kk": {
-    "meta.title": "Järdem AI - Орталық Азияға арналған ашық AI көмек",
-    "meta.description": "Järdem AI - құжаттарды түсінуге, алаяқтықты тануға және мемлекеттік қызметтерде бағыт табуға көмектесетін open-source AI көмекші.",
+    "meta.title": "Järdem AI — Орталық Азияға арналған ашық AI көмек",
+    "meta.description": "Järdem AI — құжаттарды түсінуге, алаяқтықты тануға және мемлекеттік қызметтерде бағыт табуға көмектесетін open-source AI көмекші.",
     "aria.home": "Järdem AI басты беті",
     "aria.languageSwitcher": "Тіл ауыстырғыш",
     "aria.projectPrinciples": "Жоба қағидалары",
@@ -380,9 +380,9 @@ const translations = {
     "nav.roadmap": "Жоспар",
     "nav.contact": "Байланыс",
     "nav.tryDemo": "Көру",
-    "hero.eyebrow": "Үшін ерте ашық прототип",
+    "hero.eyebrow": "Sentient Grants үшін ерте ашық прототип",
     "hero.title": "Орталық Азияға арналған ашық AI көмек.",
-    "hero.subtitle": "Järdem AI - құпиялылыққа мән беретін open-source көмекші. Ол адамдарға құжаттарды түсінуге, алаяқтықтан сақтануға және мемлекеттік, құқықтық, қаржылық әрі күнделікті маңызды жағдайларда қазақ, орыс және аралас тілде бағыт табуға көмектеседі.",
+    "hero.subtitle": "Järdem AI — құпиялылыққа мән беретін open-source көмекші. Ол адамдарға құжаттарды түсінуге, алаяқтықтан сақтануға және мемлекеттік, құқықтық, қаржылық әрі күнделікті маңызды жағдайларда қазақ, орыс және аралас тілде бағыт табуға көмектеседі.",
     "hero.primaryCta": "Интерактивті демоны көру",
     "hero.secondaryCta": "GitHub ашу",
     "hero.trust1": "Open-source",
@@ -401,7 +401,7 @@ const translations = {
     "problem.card2Title": "Күрделі қоғамдық ақпарат",
     "problem.card2Text": "Мемлекеттік қызметтер мен құқықтық рәсімдер бар, бірақ ақпарат жиі шашыраңқы, ресми тілде және қарапайым адамға түсініксіз жазылған.",
     "problem.card3Title": "Құпиялылық және сенім",
-    "problem.card3Text": "Пайдаланушыларға құжат, қаржы, алаяқтық, денсаулық немесе құқықтық жағдай бойынша көмек керек болуы мүмкін - мұндай деректер жабық black-box жүйеге тәуелді болмауы тиіс.",
+    "problem.card3Text": "Пайдаланушыларға құжат, қаржы, алаяқтық, денсаулық немесе құқықтық жағдай бойынша көмек керек болуы мүмкін — мұндай деректер жабық black-box жүйеге тәуелді болмауы тиіс.",
     "demo.kicker": "Интерактивті прототип",
     "demo.title": "Järdem AI-дың үш ерте сценарийін көріңіз",
     "demo.subtitle": "Бұл демо өнімнің алғашқы бағытын көрсетеді: алаяқтықты тексеру, құжаттарды жеңіл түсіндіру және Қазақстандағы пайдаланушылар үшін мемлекеттік қызметтерде бағыт беру.",
@@ -433,7 +433,7 @@ const translations = {
     "features.card4Text": "Сезімтал жағдайлар мен интернеті тұрақсыз орта үшін жеңіл offline-capable AI бағытына дамиды.",
     "open.kicker": "Неге open?",
     "open.title": "Бұл жабылса, өңір инфрақұрылымнан айырылады.",
-    "open.text": "Järdem AI - тек қосымша емес. Ол Орталық Азия әзірлеушілері, ҮЕҰ, білім беру жобалары, civic-tech командалары және public-interest AI үшін қайта қолданылатын ашық инфрақұрылым болуға бағытталған.",
+    "open.text": "Järdem AI — тек қосымша емес. Ол Орталық Азия әзірлеушілері, ҮЕҰ, білім беру жобалары, civic-tech командалары және public-interest AI үшін қайта қолданылатын ашық инфрақұрылым болуға бағытталған.",
     "open.item1Title": "Ашық код",
     "open.item1Text": "Көмекші интерфейсі, retrieval pipeline, safety логикасы және deployment құралдары.",
     "open.item2Title": "Ашық датасеттер",
@@ -668,4 +668,54 @@ document.addEventListener('DOMContentLoaded', () => {
       Object.assign(translations[lang], extra[lang]);
     });
   }
+})();
+
+
+// Safety supplement for the wide constellation map translations.
+(function supplementMapTranslations() {
+  const extra = {
+    en: {
+      "map.kicker": "Regional signal map",
+      "map.title": "A living map of open AI routes across Central Asia.",
+      "map.text": "Glowing paths connect languages, public knowledge, local context, and communities that mainstream AI often overlooks.",
+      "map.chip1.label": "Open route",
+      "map.chip1.value": "public knowledge",
+      "map.chip2.label": "Local signal",
+      "map.chip2.value": "mixed language",
+      "aria.constellationMap": "Animated Central Asia constellation map"
+    },
+    ru: {
+      "map.kicker": "Карта региональных сигналов",
+      "map.title": "Живая карта открытых AI-маршрутов Центральной Азии.",
+      "map.text": "Светящиеся пути соединяют языки, публичные знания, локальный контекст и сообщества, которые mainstream AI часто не замечает.",
+      "map.chip1.label": "Открытый маршрут",
+      "map.chip1.value": "публичные знания",
+      "map.chip2.label": "Локальный сигнал",
+      "map.chip2.value": "смешанный язык",
+      "aria.constellationMap": "Анимированная карта-созвездие Центральной Азии"
+    },
+    kk: {
+      "map.kicker": "Аймақтық сигнал картасы",
+      "map.title": "Орталық Азиядағы ашық AI маршруттарының тірі картасы.",
+      "map.text": "Жарқыраған жолдар тілдерді, ашық білімді, жергілікті контексті және mainstream AI жиі елемейтін қауымдастықтарды байланыстырады.",
+      "map.chip1.label": "Ашық маршрут",
+      "map.chip1.value": "ашық білім",
+      "map.chip2.label": "Локал сигнал",
+      "map.chip2.value": "аралас тіл",
+      "aria.constellationMap": "Орталық Азияның анимациялық карта-шоқжұлдызы"
+    }
+  };
+
+  if (typeof translations !== "undefined") {
+    Object.keys(extra).forEach((lang) => {
+      translations[lang] = translations[lang] || {};
+      Object.assign(translations[lang], extra[lang]);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof applyTranslations === "function" && typeof getCurrentLanguage === "function") {
+      applyTranslations(getCurrentLanguage());
+    }
+  });
 })();
