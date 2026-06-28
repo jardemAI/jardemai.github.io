@@ -37,7 +37,6 @@
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="header-actions">
-      <button id="mysticSoundToggle" class="mystic-sound-toggle" type="button" aria-pressed="false" title="Ambient sound">Sound</button>
       <div class="language-switcher" data-i18n-attr="aria-label:aria.languageSwitcher">
         <button type="button" class="lang-btn" data-lang="ru">RU</button>
         <button type="button" class="lang-btn" data-lang="kk">KZ</button>
@@ -48,157 +47,63 @@
   </header>
 
   <main id="top">
-    <section class="hero section">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">Early open prototype for Sentient Grants</span></div>
-        <h1 data-i18n="hero.title">Open AI help for Central Asia.</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">Järdem AI is an open-source, privacy-first assistant that helps people understand documents, avoid scams, and navigate government, legal, financial, and everyday high-stakes situations in Kazakh, Russian, and mixed-language contexts.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#demo" data-i18n="hero.primaryCta">Try interactive demo</a>
-          <a class="btn secondary" href="https://github.com/jardemai" target="_blank" rel="noreferrer" data-i18n="hero.secondaryCta">View GitHub</a>
-        </div>
-        <div class="trust-row" data-i18n-attr="aria-label:aria.projectPrinciples">
-          <span data-i18n="hero.trust1">Open-source</span><span data-i18n="hero.trust2">Local-first</span><span data-i18n="hero.trust3">Privacy-first</span><span data-i18n="hero.trust4">Low-resource languages</span>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="mystic-hero-stage" data-mystic="hero" aria-hidden="true">
-          <div class="mystic-depth-layer layer-moon"></div>
-          <div class="mystic-depth-layer layer-silk"></div>
-          <div class="mystic-depth-layer layer-mountains"></div>
-          <div class="mystic-depth-layer layer-symbols">
-            <span>◇</span><span>✦</span><span>𐰀</span><span>◌</span><span>✧</span>
-          </div>
-          <svg class="mystic-map" viewBox="0 0 760 420" preserveAspectRatio="xMidYMid meet">
-            <defs>
-              <linearGradient id="mysticRoute" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#8ef5d3" stop-opacity="0.05" />
-                <stop offset="45%" stop-color="#ffd38e" stop-opacity="0.95" />
-                <stop offset="100%" stop-color="#c7a6ff" stop-opacity="0.18" />
-              </linearGradient>
-              <radialGradient id="mysticNode" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#fff7d7" />
-                <stop offset="55%" stop-color="#8ef5d3" />
-                <stop offset="100%" stop-color="#8ef5d3" stop-opacity="0" />
-              </radialGradient>
-              <filter id="mysticGlow">
-                <feGaussianBlur stdDeviation="4" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
 
-            <path class="land-shape" d="M108 248 C144 172 218 138 302 158 C376 84 484 86 552 144 C620 154 674 194 688 248 C624 294 542 312 462 288 C378 346 264 336 206 292 C164 298 130 282 108 248Z" />
-
-            <path class="m-route route-a" d="M96 260 C180 166 256 206 330 122 S494 98 654 176" />
-            <path class="m-route route-b" d="M142 142 C238 184 286 312 410 266 S548 204 664 292" />
-            <path class="m-route route-c" d="M190 326 C286 242 348 300 424 186 S552 108 680 116" />
-            <path class="m-route route-d" d="M120 218 C230 238 330 228 440 202 S602 198 704 226" />
-
-            <g class="m-nodes" filter="url(#mysticGlow)">
-              <circle cx="96" cy="260" r="8" />
-              <circle cx="142" cy="142" r="6" />
-              <circle cx="190" cy="326" r="6" />
-              <circle cx="330" cy="122" r="9" />
-              <circle cx="410" cy="266" r="8" />
-              <circle cx="424" cy="186" r="7" />
-              <circle cx="654" cy="176" r="7" />
-              <circle cx="664" cy="292" r="6" />
-              <circle cx="680" cy="116" r="6" />
-            </g>
-
-            <g class="m-labels">
-              <text x="292" y="108">Qazaqstan</text>
-              <text x="594" y="104">Kyrgyz</text>
-              <text x="570" y="318">Uzbek</text>
-              <text x="102" y="288">Caspian</text>
-            </g>
-          </svg>
-
-          <div class="mystic-signal signal-left">
-            <span>Signal</span>
-            <strong>mixed-language request</strong>
-          </div>
-          <div class="mystic-signal signal-right">
-            <span>Local route</span>
-            <strong>trusted source path</strong>
-          </div>
-        </div>
-
-        <div class="phone-window">
-          <div class="phone-top"><span></span><span></span><span></span></div>
-          <div class="chat-label" data-i18n="hero.previewLabel">Järdem AI assistant</div>
-          <div class="message user" data-i18n="hero.previewUser">I received an SMS: “Your Kaspi account is blocked, confirm your data through this link.” Is this real?</div>
-          <div class="message ai" data-i18n="hero.previewAi">This looks like a high-risk scam. Do not open the link or enter card data. Open the official app manually and check notifications there.</div>
-          <div class="risk"><span data-i18n="hero.riskLabel">Risk level</span><strong data-i18n="hero.riskValue">High</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="problem section">
-      <div class="section-heading"><span class="kicker" data-i18n="problem.kicker">The gap</span><h2 data-i18n="problem.title">AI is powerful. But most of it was not built for how our region actually lives.</h2></div>
-      <div class="grid three">
-        <article class="tile"><h3 data-i18n="problem.card1Title">Language mismatch</h3><p data-i18n="problem.card1Text">People switch between Kazakh, Russian, slang, screenshots, voice notes, and short messy questions. Most AI products expect polished English prompts.</p></article>
-        <article class="tile"><h3 data-i18n="problem.card2Title">Confusing public information</h3><p data-i18n="problem.card2Text">Official services and legal procedures exist, but are often fragmented, formal, and hard to understand for ordinary users.</p></article>
-        <article class="tile"><h3 data-i18n="problem.card3Title">Privacy and trust</h3><p data-i18n="problem.card3Text">Users may need help with documents, finances, scams, health, or legal situations — exactly the data that should not depend on a closed black-box system.</p></article>
-      </div>
-    </section>
-
-    <section id="demo" class="demo section">
-      <div class="section-heading center"><span class="kicker" data-i18n="demo.kicker">Interactive prototype</span><h2 data-i18n="demo.title">Try three early Järdem AI scenarios</h2><p data-i18n="demo.subtitle">This demo shows the initial product direction: scam detection, document simplification, and public-service navigation for Kazakhstan-focused users.</p></div>
-      <div class="demo-shell">
-        <aside class="scenario-tabs" data-i18n-attr="aria-label:aria.demoScenarios">
-          <button class="scenario-tab active" data-scenario="scam"><span>01</span><span data-i18n="demo.tabScam">Scam check</span></button>
-          <button class="scenario-tab" data-scenario="document"><span>02</span><span data-i18n="demo.tabDocument">Explain a document</span></button>
-          <button class="scenario-tab" data-scenario="service"><span>03</span><span data-i18n="demo.tabService">Public-service guide</span></button>
-        </aside>
-        <div class="demo-panel">
-          <div class="demo-header"><div><p class="demo-label" id="demoLabel">Scam check</p><h3 id="demoTitle">Check suspicious messages before you click.</h3></div><div class="status-pill" data-i18n="demo.status">Prototype</div></div>
-          <div class="chat-box" id="chatBox" aria-live="polite"></div>
-          <div class="input-row"><input id="demoInput" type="text" readonly data-i18n-attr="aria-label:aria.demoPrompt" /><button id="runDemo" data-i18n="demo.runButton">Run demo</button></div>
-          <p class="demo-note" data-i18n="demo.note">Demo responses are scripted for the current prototype. The full assistant will connect open models, retrieval from trusted sources, and safety checks.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="features section">
-      <div class="section-heading"><span class="kicker" data-i18n="features.kicker">Product</span><h2 data-i18n="features.title">Built for practical, high-stakes everyday questions.</h2></div>
-      <div class="grid two">
-        <article class="feature-card"><div class="icon">✦</div><h3 data-i18n="features.card1Title">Plain-language explanations</h3><p data-i18n="features.card1Text">Turn official instructions, documents, and procedures into simple steps people can actually follow.</p></article>
-        <article class="feature-card"><div class="icon">⌁</div><h3 data-i18n="features.card2Title">Scam pattern detection</h3><p data-i18n="features.card2Text">Help users understand suspicious messages, fake links, social engineering, and common fraud patterns.</p></article>
-        <article class="feature-card"><div class="icon">◌</div><h3 data-i18n="features.card3Title">Mixed-language understanding</h3><p data-i18n="features.card3Text">Support Kazakh, Russian, and mixed local communication instead of forcing perfect formal language.</p></article>
-        <article class="feature-card"><div class="icon">▣</div><h3 data-i18n="features.card4Title">Local-first architecture</h3><p data-i18n="features.card4Text">Move toward lightweight, offline-capable AI for sensitive contexts and unstable internet environments.</p></article>
-      </div>
-    </section>
-
-
-
-    <section class="mystic-inline-showcase section">
+    <section class="ritual-motion section" aria-label="Central Asia motion system" data-i18n-attr="aria-label:aria.motionSystem">
       <div class="section-heading center">
-        <span class="kicker">Atmospheric UI system</span>
-        <h2>A living interface for loading, transitions, and quiet product moments.</h2>
-        <p>The same animation system can run as a hero scene, subtle background, preloader, modal ambience, or small embedded UI element.</p>
+        <span class="kicker" data-i18n="motion.kicker">Motion language</span>
+        <h2 data-i18n="motion.title">A living interface inspired by Central Asian routes, symbols, and night landscapes.</h2>
+        <p data-i18n="motion.subtitle">Subtle animations turn loading, transitions, cards, and empty states into a calm, memorable product experience.</p>
       </div>
-      <div class="mystic-mini-grid">
-        <div class="mystic-mini-card">
-          <div class="mystic-mini" data-mystic="mini" data-mystic-tone="route"></div>
-          <strong>Loading route</strong>
-          <span>For preloaders and page transitions.</span>
-        </div>
-        <div class="mystic-mini-card">
-          <div class="mystic-mini" data-mystic="mini" data-mystic-tone="signal"></div>
-          <strong>Signal pulse</strong>
-          <span>For cards, modals, and active states.</span>
-        </div>
-        <div class="mystic-mini-card">
-          <div class="mystic-mini" data-mystic="mini" data-mystic-tone="folk"></div>
-          <strong>Folk symbol drift</strong>
-          <span>For atmospheric decorative areas.</span>
-        </div>
+
+      <div class="motion-grid">
+        <article class="motion-card motion-card-routes">
+          <div class="motion-visual routes-visual" aria-hidden="true">
+            <svg viewBox="0 0 420 150">
+              <path class="silk-path path-one" d="M22 108 C78 42, 132 118, 190 62 S304 42, 392 88" />
+              <path class="silk-path path-two" d="M38 64 C96 88, 130 32, 196 88 S300 124, 382 44" />
+              <g class="silk-nodes">
+                <circle cx="22" cy="108" r="5" />
+                <circle cx="190" cy="62" r="6" />
+                <circle cx="392" cy="88" r="5" />
+                <circle cx="38" cy="64" r="4" />
+                <circle cx="196" cy="88" r="5" />
+                <circle cx="382" cy="44" r="4" />
+              </g>
+            </svg>
+          </div>
+          <h3 data-i18n="motion.card1.title">Silk route loading</h3>
+          <p data-i18n="motion.card1.text">Glowing paths slowly reveal movement, routing, and trusted-source discovery.</p>
+        </article>
+
+        <article class="motion-card motion-card-tumar">
+          <div class="motion-visual tumar-visual" aria-hidden="true">
+            <div class="tumar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="tumar-orbit orbit-one"></div>
+            <div class="tumar-orbit orbit-two"></div>
+          </div>
+          <h3 data-i18n="motion.card2.title">Tumar signal pulse</h3>
+          <p data-i18n="motion.card2.text">A protective folk-inspired symbol for verification, safety states, and alerts.</p>
+        </article>
+
+        <article class="motion-card motion-card-steppe">
+          <div class="motion-visual steppe-visual" aria-hidden="true">
+            <div class="moon"></div>
+            <div class="dune dune-one"></div>
+            <div class="dune dune-two"></div>
+            <div class="star-field">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <h3 data-i18n="motion.card3.title">Steppe night drift</h3>
+          <p data-i18n="motion.card3.text">Soft atmospheric movement for decorative areas, modals, and empty states.</p>
+        </article>
       </div>
     </section>
+
 
     <section id="open" class="open section">
       <div class="open-card"><div><span class="kicker" data-i18n="open.kicker">Why open?</span><h2 data-i18n="open.title">If this closes, the region loses infrastructure.</h2><p data-i18n="open.text">Järdem AI is not only an app. It is meant to become reusable open infrastructure for Central Asian developers, NGOs, educators, civic-tech teams, and public-interest AI builders.</p></div>
@@ -215,7 +120,35 @@
       </div>
     </section>
 
-    <section class="audience section"><div class="section-heading"><span class="kicker" data-i18n="audience.kicker">Who it helps</span><h2 data-i18n="audience.title">Designed for people and builders underserved by mainstream AI.</h2></div><div class="audience-tags"><span data-i18n="audience.tag1">Citizens</span><span data-i18n="audience.tag2">Elderly users</span><span data-i18n="audience.tag3">Low-digital-literacy users</span><span data-i18n="audience.tag4">Students</span><span data-i18n="audience.tag5">Migrants</span><span data-i18n="audience.tag6">Families</span><span data-i18n="audience.tag7">Small business owners</span><span data-i18n="audience.tag8">NGOs</span><span data-i18n="audience.tag9">Civic-tech builders</span><span data-i18n="audience.tag10">Open-source developers</span></div></section>
+    <section class="audience section"><div class="section-heading"><span class="kicker" data-i18n="audience.kicker">Who it helps</span><h2 data-i18n="audience.title">Designed for people and builders underserved by mainstream AI.</h2></div>
+      <div class="audience-marquee" aria-label="Audience list" data-i18n-attr="aria-label:aria.audienceList">
+        <div class="marquee-track">
+          <span data-i18n="audience.tags.citizens">Citizens</span>
+          <span data-i18n="audience.tags.elderly">Elderly users</span>
+          <span data-i18n="audience.tags.lowDigital">Low-digital-literacy users</span>
+          <span data-i18n="audience.tags.students">Students</span>
+          <span data-i18n="audience.tags.migrants">Migrants</span>
+          <span data-i18n="audience.tags.families">Families</span>
+          <span data-i18n="audience.tags.smallBusiness">Small business owners</span>
+          <span data-i18n="audience.tags.ngos">NGOs</span>
+          <span data-i18n="audience.tags.civic">Civic-tech builders</span>
+          <span data-i18n="audience.tags.developers">Open-source developers</span>
+          <span data-i18n="audience.tags.researchers">Central Asian language researchers</span>
+
+          <span data-i18n="audience.tags.citizens" aria-hidden="true">Citizens</span>
+          <span data-i18n="audience.tags.elderly" aria-hidden="true">Elderly users</span>
+          <span data-i18n="audience.tags.lowDigital" aria-hidden="true">Low-digital-literacy users</span>
+          <span data-i18n="audience.tags.students" aria-hidden="true">Students</span>
+          <span data-i18n="audience.tags.migrants" aria-hidden="true">Migrants</span>
+          <span data-i18n="audience.tags.families" aria-hidden="true">Families</span>
+          <span data-i18n="audience.tags.smallBusiness" aria-hidden="true">Small business owners</span>
+          <span data-i18n="audience.tags.ngos" aria-hidden="true">NGOs</span>
+          <span data-i18n="audience.tags.civic" aria-hidden="true">Civic-tech builders</span>
+          <span data-i18n="audience.tags.developers" aria-hidden="true">Open-source developers</span>
+          <span data-i18n="audience.tags.researchers" aria-hidden="true">Central Asian language researchers</span>
+        </div>
+      </div>
+    </section>
 
     <section id="contact" class="cta section"><div class="cta-box"><span class="kicker" data-i18n="cta.kicker">Contribute / test / support</span><h2 data-i18n="cta.title">Help build open AI infrastructure for Central Asia.</h2><p data-i18n="cta.text">We are preparing the first public repository, lightweight demo, and initial dataset for scam detection, document simplification, and public-service navigation.</p><div class="hero-actions"><a class="btn primary" href="https://github.com/jardemai" target="_blank" rel="noreferrer" data-i18n="cta.github">GitHub repository</a><a class="btn secondary" href="mailto:hello@jardem.ai" data-i18n="cta.contact">Contact team</a></div></div></section>
   </main>
